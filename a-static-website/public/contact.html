@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="UTF-8">
+  	<title>Contact - My Grumpy Cat - Pao Pao</title>
+  	<link rel="stylesheet" href="css/common.css">
+  	<link rel="stylesheet" href="css/contact.css">
+  </head>
+  <body>
+  	<header>
+  	  <div id="header__picandtext">
+  		  <img id="logo" src="pic/paopao.png">
+  		  <div id="header__text">
+  		  	<h1>My Grumpy Cat - Pao Pao</h1>
+  		  	<h2>She Is Still Judging</h2>
+  		  </div>
+  	  </div>
+
+  	  <nav class="navigation">
+  	    <button class="navigation__marker" type="button">Navigation</button>
+  		  <ul class="navigation__items">
+  			<li class="navigation__item"><a href="index.html">Homepage</a></li>
+  			<li class="navigation__item navigation__current__item"><a href="#">Contact Pao Pao</a></li>
+  			<li class="navigation__item"><a href="about.html">About</a></li>
+  		  </ul>
+  	  </nav>
+  	</header>
+
+  	<main>
+      <form class="form" action="/form" method="POST">
+        <div class="form__text">
+          <label>Thank you for your interest in Pao Pao!</label>
+          <label>Please note, however, that Pao Pao may not be interested in you.</label>
+          <label>A field is required if it is marked with an asterisk (*).</label>
+        </div>
+        <label><span class="required">Name:</span><input type="name" name="name" required></label>
+        <label><span class="required">Email:</span><input type="email" name="email" required></label>
+        <label><span>Do you want Pao Pao to consider replying you?</span><input type="checkbox" name="wantareply" checked/></label>
+        <label><span class="required">Please select how much you like Pao Pao:</span>
+          <select name="tier" required>
+            <option value="">Please select</option>
+            <option value="1">Like</option>
+            <option value="2">Really Like</option>
+            <option value="3">Super Like</option>
+          </select>
+        </label>
+        <div class="form-button-div">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+  	</main>
+
+  	<footer>
+      <div class="footer__text">The logo is a real picture of my cat - Pao Pao</div>
+    </footer> 
+  </body>
+</html>

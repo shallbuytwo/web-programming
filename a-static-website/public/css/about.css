@@ -1,0 +1,21 @@
+/* main paragraphs */
+
+p {
+	padding: 1rem;
+}
+
+#request__button__div {
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 1rem;
+}
+
+#pic__from__remote__div {
+	display: flex;
+	justify-content: space-around;
+}
+
+#pic__from__remote {
+	height: 20rem;
+	width: 20rem;
+}

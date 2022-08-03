@@ -1,0 +1,47 @@
+/* main paragraphs */
+
+p {
+	padding: 1rem;
+}
+
+/* pictures */
+
+.pic_paopao {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#pic__paopao1 {
+	height: 15rem;
+	width: 15rem;
+	padding: 1rem;
+}
+
+#pic__paopao1:hover {
+	transform: scale(1.1);
+}
+
+#pic__paopao2 {
+	height: 15rem;
+	width: 9rem;
+	padding: 1rem;
+}
+
+#pic__paopao2:hover {
+	transform: scale(1.1);
+}
+
+/* transition only if user wants it */
+@media (prefers-reduced-motion: no-preference) {
+	#pic__paopao1, #pic__paopao2 {
+		transition: all 300ms;
+	}
+}
+
+/* if width is larger than 600px */
+@media (min-width:  600px) {
+	.pic_paopao {
+		flex-direction: row;
+	}
+}
