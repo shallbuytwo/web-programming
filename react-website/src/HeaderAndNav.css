@@ -1,0 +1,137 @@
+/* header */
+
+.header-and-nav {
+	background: inehrit;
+}
+
+#logo {
+	height: 7rem;
+	width: 7rem;
+}
+
+#header {
+	display: flex;
+	gap: 2rem;
+}
+
+#header-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#header-text h1 {
+	font-size: 1.5rem;
+}
+
+#header-text h2 {
+	font-size: 1rem;
+}
+
+#header-text h3 {
+	font-family: serif;
+	font-size: 0.8rem;
+}
+
+/* skip list */
+
+.skip-link {
+  background: pink;
+  height: 30px;
+  left: 50%;
+  padding: 8px;
+  position: absolute;
+  transform: translateY(-100%);
+}
+
+.skip-link:focus {
+	transform: translateY(0%);
+}
+
+/* nav menu */
+
+.nav {
+	background-color: mistyrose;
+	border: 1px solid pink;
+}
+
+.nav-marker {
+	border: 0;
+	padding: 0.6rem;
+	font-size: inherit;
+	background-color: mistyrose;
+}
+
+.nav-marker::after {
+	content: " +";
+}
+
+.nav:focus-within .nav-items,
+.nav:hover .nav-items {
+	transform: rotateX(0deg);
+}
+
+.nav-items {
+	position: absolute;
+	transform: rotateX(90deg);
+	transform-origin: top;
+
+	list-style-type: none;
+	overflow: hidden;
+	background-color: mistyrose;
+}
+
+.nav-item {
+	padding: 0.6rem;
+}
+
+.nav-item > button {
+	border: none;
+	background-color: inherit;
+}
+
+.nav-item:focus-within, .nav-item:hover,
+.nav-item-active {
+	background-color: pink;
+}
+
+/* transition only if user wants it */
+/* we don't have transition in larger layout */
+@media (max-width: 599px) and (prefers-reduced-motion: no-preference) {
+	.nav-items {
+		transition: transform 200ms;
+	}
+}
+
+/* if the width is more than 600px, */
+@media (min-width:  600px) {
+	#logo {
+		height: 10rem;
+		width: 10rem;
+	}
+
+	#header-text h1 {
+		font-size: 2rem;
+	}
+
+	#header-text h2 {
+		font-size: 1.25rem;
+	}
+
+	.nav {
+		display: flex;
+	}
+
+	.nav-marker::after {
+		content:  " >";
+	}
+
+	.nav-items {
+		position: initial;
+		transform: none;
+
+		display: flex;
+		flex-grow: 1;
+		justify-content: space-around;
+	}
+}

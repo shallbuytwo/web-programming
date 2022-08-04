@@ -1,0 +1,53 @@
+/* for text */
+
+p {
+	padding: 1rem;
+}
+
+.status-msg {
+	color: red;
+}
+
+/* for forms */
+
+.functionalities {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+/* if the width is more than 600px, */
+@media (min-width:  600px) {
+	/* change the flex box to row */
+	.functionalities {
+		flex-direction: row;
+	}
+}
+
+.login, .register, .logout {
+	padding: 2rem;
+	border: 2px solid pink;
+}
+
+.login-form, .register-form {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem auto;
+	width: 100%;
+}
+
+.login-form label, .register-form label {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 1rem;
+}
+
+.logout {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.submit-button-div {
+	margin: auto;
+}

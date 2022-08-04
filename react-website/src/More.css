@@ -1,0 +1,62 @@
+/* global (for this component) */
+
+.more {
+	display: flex;
+}
+
+.tabs {
+	margin: auto;
+	margin-top: 2rem;
+}
+
+/* tunings for the tab */
+
+.tabs-header {
+	padding: 0;
+	max-width: 45rem;
+	display: flex;
+	/* build the border below tabs */
+	border-bottom: 2px solid black;
+}
+
+.tabs-header-button {
+	padding: 0.25rem 0.5rem;
+	font-size: 1rem;
+
+	background-color: inherit;
+	/* every button itself doesn't have border */
+	border: none;
+}
+
+.tabs-header-button-open {
+	background-color: inherit;
+	border: solid black;
+	/* once selected, we will have border at top left right, but not bottom */
+	border-width: 2px 2px 0 2px;	
+	/* make sure our non-border will override the border if needed */
+	margin-bottom: -2px;
+}
+
+/* for the content box */
+
+.tabs-content {
+	border: none;
+	/* build border for the rest three sides */
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+
+	max-width: 45rem;
+	height: 50vh;
+
+	padding: 1.5rem;
+}
+
+/* if the width is more than 600px, */
+@media (min-width:  600px) {
+	/* increase the size of the tab */
+	.tabs-header-button {
+		padding: 0.25rem 1.5rem;
+		font-size: 1rem;
+	}
+}

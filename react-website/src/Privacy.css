@@ -1,0 +1,15 @@
+.privacy-button {
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 2rem;
+}
+
+.privacy-image {
+	display: flex;
+	justify-content: space-around;
+}
+
+.privacy-image > img {
+	height: 15rem;
+	width: 15rem;
+}

@@ -1,0 +1,60 @@
+/* form */
+
+.form {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem auto;
+	width: 65%;
+}
+
+.form label {
+	display: flex;
+	flex-direction: column;
+	padding: 0.3rem;
+}
+
+.form-text {
+	padding-bottom: 2rem;
+}
+
+.form-button-div {
+	margin: auto;
+}
+
+.required::after {
+	content: " *";
+	color: red;
+}
+
+/* statistic list */
+
+.wholelist {
+	margin: 2rem auto;
+	width: 80%;
+
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-column-gap: 0.5rem;
+}
+
+.wholelist-title {
+	grid-column: span 12;
+
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+.wholelist-name, .wholelist-email,
+.wholelist-wantareply, .wholelist-howmuchlike {
+	grid-column: span 3;
+	margin-top: 0.4rem;
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+.wholelist > .name, .wholelist > .email,
+.wholelist > .wantareply, .wholelist > .howmuchlike {
+	grid-column: span 3;
+	margin-top: 0.4rem;
+	font-size: 0.7rem;
+}
